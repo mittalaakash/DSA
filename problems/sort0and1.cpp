@@ -23,7 +23,6 @@ int main()
             swap(arr[i], arr[end]);
             end--;
         }
-
         // print
     }
     for (auto value : arr)
