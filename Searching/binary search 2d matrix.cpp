@@ -10,10 +10,15 @@ bool binarySearch(int arr[][4], int rows, int cols, int target)
     // avoid integer overflow => mid= start + (end-start)/2
     while (start <= end)
     {
-        int element = arr[mid / cols][mid % cols];
+        int rowIndex = mid / cols;
+        int colIndex = mid % cols;
+        int element = arr[rowIndex][colIndex];
 
         if (element == target)
+        {
+            cout << "found at row: " << rowIndex << ", col: " << colIndex << endl;
             return true;
+        }
         else if (target < element)
         { // search in left
             end = mid - 1;
@@ -37,7 +42,7 @@ int main()
     cin >> target;
 
     bool ans = binarySearch(arr, rows, cols, target);
-    cout << ans;
+    cout << (ans ? "found" : "notfound");
 
     return 0;
 }
