@@ -3,6 +3,9 @@
 #include <vector>
 using namespace std;
 
+// upper_bound can find the first occurence from algorithm header file
+// int ans = upper_bound(v.begin(), v.end(), target);
+
 int lastOccurence(vector<int> v, int target)
 {
     int s = 0;
