@@ -36,5 +36,14 @@ int main()
     int indexOfTarget = binarySearch(arr, size, target);
     cout << indexOfTarget;
 
+    // vector<int> v{1, 2, 3, 4, 5, 6};
+    // int arr[] = {1, 2, 3, 4, 5, 6};
+    // int value = binary_search(v.begin(), v.end(), 3); imported from algorithm file
+    //  int arr[] = {1, 2, 3, 4, 5, 6};
+    // int value = binary_search(arr, arr + 6, 3);
+
+    // cout << value;
+    // output  +=> 0 and 1
+
     return 0;
 }
