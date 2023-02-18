@@ -15,7 +15,7 @@ int findPivotElement(int arr[], int size)
             return mid;
         else if (mid - 1 >= 0 && arr[mid - 1] > arr[mid])
             return mid - 1;
-        else if (arr[start] > arr[mid])
+        else if (arr[start] >= arr[mid])
         {
             end = mid - 1;
         }
