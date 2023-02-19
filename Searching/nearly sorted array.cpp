@@ -22,11 +22,11 @@ int binarySearch(vector<int> arr, int target)
             return mid + 1;
         }
         else if (target > arr[mid])
-        {
+        { // right serach
             start = mid + 2;
         }
         else
-        {
+        { // left search
             end = mid - 2;
         }
         mid = start + (-start + end) / 2;
