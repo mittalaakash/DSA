@@ -12,7 +12,6 @@ int main()
     {
         // step 1 fetch
         int val = arr[round];
-
         // step 2 compare
         int j = round - 1;
         for (; j >= 0; j--)
