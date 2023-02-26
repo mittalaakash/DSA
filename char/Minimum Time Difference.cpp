@@ -5,11 +5,12 @@
 
 using namespace std;
 
-// void log(vector<int> v)
-// {
-//     for (auto value : v)
-//         cout << value << " ";
-// }
+void log(vector<int> v)
+{
+    for (auto value : v)
+        cout << value << " ";
+    cout << endl;
+}
 
 int findMinDifference(vector<string> &timePoints)
 {
@@ -29,16 +30,18 @@ int findMinDifference(vector<string> &timePoints)
 
     // 2: sort
     sort(minutes.begin(), minutes.end());
+    // log(minutes);
 
     // 3: d/f and calc min d/f
     int mini = INT_MAX;
     int n = minutes.size();
 
-    for (int i = 0; i < n; i++)
+    for (int i = 1; i < n; i++)
     {
-        int diff = minutes[i + 1] - minutes[i];
+        int diff = minutes[i] - minutes[i - 1];
         mini = min(mini, diff);
     }
+
     int lastDiff = minutes[0] + 1440 - minutes[n - 1];
     mini = min(mini, lastDiff);
 
@@ -46,7 +49,7 @@ int findMinDifference(vector<string> &timePoints)
 }
 int main()
 {
-    vector<string> v{"23:59", "00:00"};
+    vector<string> v{"00:00", "23:59", "00:00"};
 
     int ans = findMinDifference(v);
     cout << ans;
